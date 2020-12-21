@@ -39,7 +39,7 @@ class QuestionCard extends React.Component {
                                 this.props.choices.map((x,ind) => {
                                     return (
                                         <Grid.Row key={ind}>
-                                            <Grid.Column computer='5' tablet='8' mobile='12'>
+                                            <Grid.Column computer='6' tablet='8' mobile='12'>
                                                 <Button disabled={this.props.time < 1} fluid size='large' basic color={this.props.selected ? x === this.props.selected ? x === this.props.correct ? 'green' : 'red' : x === this.props.correct ? 'green' : 'teal' : 'teal'} onClick={this.props.onChoice}>{x}</Button>
                                             </Grid.Column>
                                         </Grid.Row>
@@ -50,7 +50,7 @@ class QuestionCard extends React.Component {
                             this.props.choices.map((x,ind) => {
                                 return (
                                     <Grid.Row key={ind}>
-                                        <Grid.Column computer='5' tablet='8' mobile='12'>
+                                        <Grid.Column computer='6' tablet='8' mobile='12'>
                                             <Button disabled={this.props.time < 1} fluid size='large' basic color={this.props.selected ? x === this.props.selected ? x === this.props.correct ? 'green' : 'red' : x === this.props.correct ? 'green' : 'teal' : 'teal'} onClick={this.props.onChoice}>{x}</Button>
                                         </Grid.Column>
                                     </Grid.Row>

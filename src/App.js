@@ -9,7 +9,7 @@ function App() {
   return (
     <Grid padded>
       <Grid.Row centered>
-        <Grid.Column computer='8' mobile='16' tablet='12'>
+        <Grid.Column computer='10' mobile='16' tablet='12'>
           <Switch>
             <Route path='/' component={Categories} exact></Route>
             <Route path='/quiz' component={Quiz}></Route>

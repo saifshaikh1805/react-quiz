@@ -156,7 +156,7 @@ class Quiz extends React.Component {
                             <Grid.Column width='8'>
                                 <Button onClick={this.handleGoToCategoriesClick} icon color='teal' basic labelPosition='left'>
                                     <Icon name='left arrow' />
-                              Go back
+                              Quit
                         </Button>
                             </Grid.Column>
                             <Grid.Column width='8' textAlign='right'>

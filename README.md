@@ -1,4 +1,4 @@
-# A simple yet beautiful quiz app built with react js
+# A simple yet beautiful and fun quiz app built with react js
 
 1) The questions are multiple choice questions based on various categories.
 2) The questions are fetched from an API.

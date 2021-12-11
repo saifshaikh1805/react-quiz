@@ -92,7 +92,7 @@ class Quiz extends React.Component {
                 //debugger;
                 dispatchAction(quizActions.SET_PHASE, 'COMPLETE');
             }
-        }, 1500);
+        }, 2000);
 
     }
 

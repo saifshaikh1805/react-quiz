@@ -17,19 +17,23 @@ class Quiz extends React.Component {
     }
 
     manageTime = () => {
-        this.ti = setInterval(() => {
-            let tr = this.props.quiz.questions[this.props.quiz.currentQuestion].timeRemaining;
-            if (tr > 0)
-                dispatchAction(quizActions.SET_TIME_REM, tr - 1000);
-            else
-                this.skipQuestion();
-        }, 1000);
+        setTimeout(() => {
+            this.ti = setInterval(() => {
+                let tr = this.props.quiz.questions[this.props.quiz.currentQuestion].timeRemaining;
+                if (tr > 0)
+                    dispatchAction(quizActions.SET_TIME_REM, tr - 1000);
+                else
+                    this.skipQuestion();
+            }, 1000);
+        }, 4000)
     }
 
     ti;
 
     fetchQuestions = () => {
-        fetch('https://opentdb.com/api.php?amount=7&category=' + this.props.quiz.category.id)
+        if(this.props.quiz.category.id !== -1)
+        {
+            fetch('https://opentdb.com/api.php?amount=7&category=' + this.props.quiz.category.id)
             .then(res => res.json())
             .then(data => {
                 //console.log('qs', data);
@@ -51,6 +55,10 @@ class Quiz extends React.Component {
                 dispatchAction(quizActions.SET_PHASE, 'ONGOING');
                 this.manageTime();
             });
+        }
+        else {
+            this.props.history.push('/');
+        }
     }
 
     skipQuestion = () => {
